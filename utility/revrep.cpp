@@ -14,8 +14,7 @@ class revrep {
     const usize last;
 
   public:
-    constexpr revrep(const usize first_, const usize last_) noexcept
-        : first(last_ - 1), last(first_ - 1) {}
+    constexpr revrep(const usize first_, const usize last_) noexcept : first(last_ - 1), last(first_ - 1) {}
     constexpr revrep_iterator begin() const noexcept { return first; }
     constexpr usize end() const noexcept { return last; }
 };
