@@ -2,6 +2,8 @@
 
 #include "../utility/int_alias.cpp"
 #include <array>
+#include <limits>
+#include <type_traits>
 
 class to4 {
     using value_type = usize;
