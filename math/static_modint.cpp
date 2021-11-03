@@ -12,12 +12,10 @@ template <std::uint32_t MOD> class StaticModint {
     static constexpr std::uint32_t mod() noexcept { return MOD; }
     template <class T> static constexpr T mod() noexcept { return static_cast<T>(MOD); }
 
-    template <class T, std::enable_if_t<std::is_unsigned_v<T>> * = nullptr>
-    static constexpr std::uint32_t normalize(const T v) noexcept {
+    template <class T, std::enable_if_t<std::is_unsigned_v<T>> * = nullptr> static constexpr std::uint32_t normalize(const T v) noexcept {
         return static_cast<std::uint32_t>(v % mod<T>());
     }
-    template <class T, std::enable_if_t<std::is_signed_v<T>> * = nullptr>
-    static constexpr std::uint32_t normalize(const T v) noexcept {
+    template <class T, std::enable_if_t<std::is_signed_v<T>> * = nullptr> static constexpr std::uint32_t normalize(const T v) noexcept {
         if(v < 0)
             return static_cast<std::uint32_t>(v % mod<T>() + mod<T>());
         else
@@ -65,18 +63,10 @@ template <std::uint32_t MOD> class StaticModint {
         return ret;
     }
 
-    constexpr this_type operator+(const this_type &rhs) const noexcept {
-        return this_type(*this) += rhs;
-    }
-    constexpr this_type operator-(const this_type &rhs) const noexcept {
-        return this_type(*this) -= rhs;
-    }
-    constexpr this_type operator*(const this_type &rhs) const noexcept {
-        return this_type(*this) *= rhs;
-    }
-    constexpr this_type operator/(const this_type &rhs) const noexcept {
-        return this_type(*this) /= rhs;
-    }
+    constexpr this_type operator+(const this_type &rhs) const noexcept { return this_type(*this) += rhs; }
+    constexpr this_type operator-(const this_type &rhs) const noexcept { return this_type(*this) -= rhs; }
+    constexpr this_type operator*(const this_type &rhs) const noexcept { return this_type(*this) *= rhs; }
+    constexpr this_type operator/(const this_type &rhs) const noexcept { return this_type(*this) /= rhs; }
 
     constexpr this_type &operator+=(const this_type &rhs) noexcept {
         if((value += rhs.value) >= mod())
@@ -90,9 +80,7 @@ template <std::uint32_t MOD> class StaticModint {
         return *this;
     }
     constexpr this_type &operator*=(const this_type &rhs) noexcept {
-        value = static_cast<std::uint32_t>(static_cast<std::uint64_t>(value) *
-                                           static_cast<std::uint64_t>(rhs.value) %
-                                           mod<std::uint64_t>());
+        value = static_cast<std::uint32_t>(static_cast<std::uint64_t>(value) * static_cast<std::uint64_t>(rhs.value) % mod<std::uint64_t>());
         return *this;
     }
     constexpr this_type &operator/=(const this_type &rhs) noexcept { return *this *= rhs.inv(); }

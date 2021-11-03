@@ -2,6 +2,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include "../utility/int_alias.cpp"
 
 constexpr std::int8_t operator""_i8(unsigned long long n) noexcept {
     return static_cast<std::int8_t>(n);
