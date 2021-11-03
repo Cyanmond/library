@@ -19,7 +19,7 @@ class to8 {
         constexpr void operator++() noexcept {
             do {
                 ++d;
-            } while(d != 8 and (h + dx[d] == minus1 or h + dx[d] == maxh or w + dy[d] == minus1 or w + dy[d] == maxw));
+            } while (d != 8 and (h + dx[d] == minus1 or h + dx[d] == maxh or w + dy[d] == minus1 or w + dy[d] == maxw));
         }
         constexpr bool operator!=(const int other) const noexcept { return d != other; }
         constexpr std::pair<value_type, value_type> operator*() const noexcept { return {h + dx[d], w + dy[d]}; }
