@@ -4,7 +4,8 @@
 #include <algorithm>
 #include <vector>
 
-template <class Head, class... Tail> std::vector<usize> zip_sort(std::vector<Head> &head, std::vector<Tail> &...tail) {
+template <class Head, class... Tail>
+std::vector<usize> zip_sort(std::vector<Head> &head, std::vector<Tail> &...tail) {
     const usize n = head.size();
 
     std::vector<std::tuple<Head, Tail..., usize>> res(n);

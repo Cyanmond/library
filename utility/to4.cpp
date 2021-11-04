@@ -14,21 +14,27 @@ class to4 {
     struct to4_iterator {
         int d;
         const value_type h, w, maxh, maxw;
-        constexpr to4_iterator(const value_type h_, const value_type w_, const value_type maxh_, const value_type maxw_) noexcept
+        constexpr to4_iterator(const value_type h_, const value_type w_, const value_type maxh_,
+                               const value_type maxw_) noexcept
             : d(0), h(h_), w(w_), maxh(maxh_), maxw(maxw_) {}
         constexpr void operator++() noexcept {
             do {
                 ++d;
-            } while (d != 4 and (h + dx[d] == minus1 or h + dx[d] == maxh or w + dy[d] == minus1 or w + dy[d] == maxw));
+            } while (d != 4 and (h + dx[d] == minus1 or h + dx[d] == maxh or w + dy[d] == minus1 or
+                                 w + dy[d] == maxw));
         }
         constexpr bool operator!=(const int other) const noexcept { return d != other; }
-        constexpr std::pair<value_type, value_type> operator*() const noexcept { return {h + dx[d], w + dy[d]}; }
+        constexpr std::pair<value_type, value_type> operator*() const noexcept {
+            return {h + dx[d], w + dy[d]};
+        }
     };
 
     const to4_iterator i;
 
   public:
-    constexpr to4(const value_type h, const value_type w, const value_type maxh, const value_type maxw) noexcept : i(h, w, maxh, maxw) {}
+    constexpr to4(const value_type h, const value_type w, const value_type maxh,
+                  const value_type maxw) noexcept
+        : i(h, w, maxh, maxw) {}
     constexpr to4_iterator begin() const noexcept { return i; }
     constexpr int end() const noexcept { return 4; }
 };
