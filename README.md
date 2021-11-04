@@ -1,5 +1,7 @@
 競技プログラミング用のライブラリです。環境は GCC, C++17 を想定しています。現段階では中身が充実していません。
 
+oj bundle などを使うことを想定しています。
+
 バグを見つけた場合は、よければ [Twitter](https://twitter.com/Cyanmond_mapr) までお知らせください。
 
  [![](https://img.shields.io/badge/license-CC0_License-blue.svg)](https://github.com/Cyanmond/library/blob/main/LICENSE)
