@@ -42,6 +42,9 @@ data:
       path: utility/setmin.cpp
       title: utility/setmin.cpp
     - icon: ':warning:'
+      path: utility/stdiocustom.cpp
+      title: utility/stdiocustom.cpp
+    - icon: ':warning:'
       path: utility/to4.cpp
       title: utility/to4.cpp
     - icon: ':warning:'
