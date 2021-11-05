@@ -3,6 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
+    path: debug/debug_impl.cpp
+    title: debug/debug_impl.cpp
+  - icon: ':warning:'
+    path: utility/int_infinity.cpp
+    title: utility/int_infinity.cpp
+  - icon: ':warning:'
     path: utility/int_literal.cpp
     title: utility/int_literal.cpp
   - icon: ':heavy_check_mark:'
@@ -94,6 +100,7 @@ data:
   isVerificationFile: false
   path: utility/int_alias.cpp
   requiredBy:
+  - debug/debug_impl.cpp
   - utility/rep.cpp
   - utility/repstep.cpp
   - utility/int_literal.cpp
@@ -101,6 +108,7 @@ data:
   - utility/to8.cpp
   - utility/revrep.cpp
   - utility/zip_sort.cpp
+  - utility/int_infinity.cpp
   timestamp: '2021-11-03 23:24:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

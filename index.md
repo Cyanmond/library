@@ -1,6 +1,11 @@
 ---
 data:
   libraryCategories:
+  - name: debug
+    pages:
+    - icon: ':warning:'
+      path: debug/debug_impl.cpp
+      title: debug/debug_impl.cpp
   - name: math
     pages:
     - icon: ':warning:'
