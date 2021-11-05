@@ -3,10 +3,10 @@
 #include <iostream>
 #include <vector>
 
-#include "../utility/eoln.cpp"
-#include "../utility/int_alias.cpp"
-#include "../utility/rep.cpp"
-#include "../utility/scan.cpp"
+#include "../../utility/eoln.cpp"
+#include "../../utility/int_alias.cpp"
+#include "../../utility/rep.cpp"
+#include "../../utility/scan.cpp"
 
 int main(void) {
     const usize T = scan<usize>();
