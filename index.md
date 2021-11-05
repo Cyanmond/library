@@ -8,10 +8,10 @@ data:
       title: math/static_modint.cpp
   - name: utility
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: utility/eoln.cpp
       title: utility/eoln.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: utility/int_alias.cpp
       title: utility/int_alias.cpp
     - icon: ':warning:'
@@ -23,7 +23,7 @@ data:
     - icon: ':warning:'
       path: utility/rec_lambda.cpp
       title: utility/rec_lambda.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: utility/rep.cpp
       title: utility/rep.cpp
     - icon: ':warning:'
@@ -32,7 +32,7 @@ data:
     - icon: ':warning:'
       path: utility/revrep.cpp
       title: utility/revrep.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: utility/scan.cpp
       title: utility/scan.cpp
     - icon: ':warning:'
@@ -53,7 +53,7 @@ data:
   verificationCategories:
   - name: verify/library-checker
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: verify/library-checker/many_aplusb.test.cpp
       title: verify/library-checker/many_aplusb.test.cpp
 layout: toppage

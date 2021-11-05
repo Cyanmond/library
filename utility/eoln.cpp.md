@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify/library-checker/many_aplusb.test.cpp
+    title: verify/library-checker/many_aplusb.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: '#line 2 "utility/eoln.cpp"
@@ -23,8 +26,9 @@ data:
   path: utility/eoln.cpp
   requiredBy: []
   timestamp: '2021-11-04 01:59:04+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify/library-checker/many_aplusb.test.cpp
 documentation_of: utility/eoln.cpp
 layout: document
 redirect_from:

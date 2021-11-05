@@ -1,14 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: utility/int_alias.cpp
     title: utility/int_alias.cpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify/library-checker/many_aplusb.test.cpp
+    title: verify/library-checker/many_aplusb.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"utility/rep.cpp\"\n\n#line 2 \"utility/int_alias.cpp\"\n\
@@ -41,8 +44,9 @@ data:
   path: utility/rep.cpp
   requiredBy: []
   timestamp: '2021-11-04 00:40:38+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify/library-checker/many_aplusb.test.cpp
 documentation_of: utility/rep.cpp
 layout: document
 redirect_from:

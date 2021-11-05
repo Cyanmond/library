@@ -5,7 +5,7 @@ data:
   - icon: ':warning:'
     path: utility/int_literal.cpp
     title: utility/int_literal.cpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: utility/rep.cpp
     title: utility/rep.cpp
   - icon: ':warning:'
@@ -23,10 +23,13 @@ data:
   - icon: ':warning:'
     path: utility/zip_sort.cpp
     title: utility/zip_sort.cpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify/library-checker/many_aplusb.test.cpp
+    title: verify/library-checker/many_aplusb.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: '#line 2 "utility/int_alias.cpp"
@@ -99,8 +102,9 @@ data:
   - utility/revrep.cpp
   - utility/zip_sort.cpp
   timestamp: '2021-11-03 23:24:28+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify/library-checker/many_aplusb.test.cpp
 documentation_of: utility/int_alias.cpp
 layout: document
 redirect_from:
