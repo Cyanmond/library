@@ -50,6 +50,11 @@ data:
     - icon: ':warning:'
       path: utility/zip_sort.cpp
       title: utility/zip_sort.cpp
-  verificationCategories: []
+  verificationCategories:
+  - name: verify/library-checker
+    pages:
+    - icon: ':x:'
+      path: verify/library-checker/many_aplusb.test.cpp
+      title: verify/library-checker/many_aplusb.test.cpp
 layout: toppage
 ---
