@@ -17,19 +17,29 @@ data:
     \ i64 = std::int64_t;\nusing u16 = std::uint16_t;\nusing u32 = std::uint32_t;\n\
     using u64 = std::uint64_t;\n\nusing usize = std::size_t;\nusing isize = std::ptrdiff_t;\n\
     #line 4 \"utility/zip_sort.cpp\"\n#include <algorithm>\n#include <vector>\n\n\
-    template <class Head, class... Tail>\nstd::vector<usize> zip_sort(std::vector<Head>\
-    \ &head, std::vector<Tail> &...tail) {\n    const usize n = head.size();\n\n \
-    \   std::vector<std::tuple<Head, Tail..., usize>> res(n);\n    for (usize i =\
-    \ 0; i < n; ++i)\n        res[i] = std::make_tuple(head[i], tail[i]..., i);\n\
-    \    std::sort(res.begin(), res.end());\n\n    std::vector<usize> order(n);\n\
-    \    for (usize i = 0; i < n; ++i)\n        order[i] = std::get<std::tuple_size_v<std::tuple<Head,\
-    \ Tail...>>>(res[i]);\n    helper::zip_sort_renumber(order, head, tail...);\n\
-    \    return order;\n}\n"
-  code: "#pragma once\n\n#include \"../utility/int_alias.cpp\"\n#include <algorithm>\n\
-    #include <vector>\n\ntemplate <class Head, class... Tail>\nstd::vector<usize>\
+    namespace helper {\ntemplate <class T, class... Tail>\nvoid zip_sort_renumber(const\
+    \ std::vector<usize> &order, std::vector<T> &head, Tail &...tail) {\n    const\
+    \ usize n = order.size();\n    std::vector<T> sorted_head(n);\n    for (usize\
+    \ i = 0; i < n; ++i)\n        sorted_head[i] = head[order[i]];\n    head = std::move(sorted_head);\n\
+    \    if constexpr (sizeof...(Tail) != 0) zip_sort_renumber(order, tail...);\n\
+    }\n} // namespace helper\n\ntemplate <class Head, class... Tail>\nstd::vector<usize>\
     \ zip_sort(std::vector<Head> &head, std::vector<Tail> &...tail) {\n    const usize\
     \ n = head.size();\n\n    std::vector<std::tuple<Head, Tail..., usize>> res(n);\n\
     \    for (usize i = 0; i < n; ++i)\n        res[i] = std::make_tuple(head[i],\
+    \ tail[i]..., i);\n    std::sort(res.begin(), res.end());\n\n    std::vector<usize>\
+    \ order(n);\n    for (usize i = 0; i < n; ++i)\n        order[i] = std::get<std::tuple_size_v<std::tuple<Head,\
+    \ Tail...>>>(res[i]);\n    helper::zip_sort_renumber(order, head, tail...);\n\
+    \    return order;\n}\n"
+  code: "#pragma once\n\n#include \"../utility/int_alias.cpp\"\n#include <algorithm>\n\
+    #include <vector>\n\nnamespace helper {\ntemplate <class T, class... Tail>\nvoid\
+    \ zip_sort_renumber(const std::vector<usize> &order, std::vector<T> &head, Tail\
+    \ &...tail) {\n    const usize n = order.size();\n    std::vector<T> sorted_head(n);\n\
+    \    for (usize i = 0; i < n; ++i)\n        sorted_head[i] = head[order[i]];\n\
+    \    head = std::move(sorted_head);\n    if constexpr (sizeof...(Tail) != 0) zip_sort_renumber(order,\
+    \ tail...);\n}\n} // namespace helper\n\ntemplate <class Head, class... Tail>\n\
+    std::vector<usize> zip_sort(std::vector<Head> &head, std::vector<Tail> &...tail)\
+    \ {\n    const usize n = head.size();\n\n    std::vector<std::tuple<Head, Tail...,\
+    \ usize>> res(n);\n    for (usize i = 0; i < n; ++i)\n        res[i] = std::make_tuple(head[i],\
     \ tail[i]..., i);\n    std::sort(res.begin(), res.end());\n\n    std::vector<usize>\
     \ order(n);\n    for (usize i = 0; i < n; ++i)\n        order[i] = std::get<std::tuple_size_v<std::tuple<Head,\
     \ Tail...>>>(res[i]);\n    helper::zip_sort_renumber(order, head, tail...);\n\
@@ -39,7 +49,7 @@ data:
   isVerificationFile: false
   path: utility/zip_sort.cpp
   requiredBy: []
-  timestamp: '2021-11-04 11:05:03+09:00'
+  timestamp: '2021-11-07 20:31:16+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/zip_sort.cpp

@@ -13,6 +13,9 @@ data:
       title: math/static_modint.cpp
   - name: utility
     pages:
+    - icon: ':warning:'
+      path: utility/ceil_log2.cpp
+      title: utility/ceil_log2.cpp
     - icon: ':heavy_check_mark:'
       path: utility/eoln.cpp
       title: utility/eoln.cpp
