@@ -6,6 +6,9 @@ data:
     title: utility/int_alias.cpp
   _extendedRequiredBy:
   - icon: ':warning:'
+    path: data-structure/lazysegmenttree_utility.cpp
+    title: data-structure/lazysegmenttree_utility.cpp
+  - icon: ':warning:'
     path: debug/debug_impl.cpp
     title: debug/debug_impl.cpp
   _extendedVerifiedWith: []
@@ -101,6 +104,7 @@ data:
   path: utility/int_infinity.cpp
   requiredBy:
   - debug/debug_impl.cpp
+  - data-structure/lazysegmenttree_utility.cpp
   timestamp: '2021-11-05 21:13:49+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

@@ -3,6 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
+    path: data-structure/lazysegmenttree.cpp
+    title: data-structure/lazysegmenttree.cpp
+  - icon: ':warning:'
+    path: data-structure/lazysegmenttree_utility.cpp
+    title: data-structure/lazysegmenttree_utility.cpp
+  - icon: ':warning:'
+    path: data-structure/segmenttree.cpp
+    title: data-structure/segmenttree.cpp
+  - icon: ':warning:'
     path: debug/debug_impl.cpp
     title: debug/debug_impl.cpp
   - icon: ':warning:'
@@ -101,6 +110,9 @@ data:
   path: utility/int_alias.cpp
   requiredBy:
   - debug/debug_impl.cpp
+  - data-structure/segmenttree.cpp
+  - data-structure/lazysegmenttree.cpp
+  - data-structure/lazysegmenttree_utility.cpp
   - utility/rep.cpp
   - utility/repstep.cpp
   - utility/int_literal.cpp

@@ -1,6 +1,17 @@
 ---
 data:
   libraryCategories:
+  - name: data-structure
+    pages:
+    - icon: ':warning:'
+      path: data-structure/lazysegmenttree.cpp
+      title: data-structure/lazysegmenttree.cpp
+    - icon: ':warning:'
+      path: data-structure/lazysegmenttree_utility.cpp
+      title: data-structure/lazysegmenttree_utility.cpp
+    - icon: ':warning:'
+      path: data-structure/segmenttree.cpp
+      title: data-structure/segmenttree.cpp
   - name: debug
     pages:
     - icon: ':warning:'
