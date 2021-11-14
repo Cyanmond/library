@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: utility/int_binary_search.cpp
+    title: utility/int_binary_search.cpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
@@ -16,7 +19,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: utility/difference.cpp
-  requiredBy: []
+  requiredBy:
+  - utility/int_binary_search.cpp
   timestamp: '2021-11-14 20:45:33+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

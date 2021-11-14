@@ -1,6 +1,11 @@
 ---
 data:
   libraryCategories:
+  - name: bit
+    pages:
+    - icon: ':warning:'
+      path: bit/ceil_log2.cpp
+      title: bit/ceil_log2.cpp
   - name: data-structure
     pages:
     - icon: ':warning:'
@@ -34,9 +39,6 @@ data:
   - name: utility
     pages:
     - icon: ':warning:'
-      path: utility/ceil_log2.cpp
-      title: utility/ceil_log2.cpp
-    - icon: ':warning:'
       path: utility/difference.cpp
       title: utility/difference.cpp
     - icon: ':heavy_check_mark:'
@@ -48,6 +50,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: utility/int_alias.cpp
       title: utility/int_alias.cpp
+    - icon: ':warning:'
+      path: utility/int_binary_search.cpp
+      title: utility/int_binary_search.cpp
     - icon: ':warning:'
       path: utility/int_infinity.cpp
       title: utility/int_infinity.cpp
