@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: math/pow_mod.cpp
+    title: math/pow_mod.cpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
@@ -10,16 +13,17 @@ data:
     links: []
   bundledCode: "#line 2 \"math/normalize_mod.cpp\"\n\n#include <cassert>\n\ntemplate\
     \ <typename T> constexpr T normalize_mod(const T x, const T mod) {\n    assert(mod\
-    \ > 0);\n    if (x > 0)\n        return x % mod;\n    else\n        x % mod +\
-    \ mod;\n}\n"
+    \ > 0);\n    if (x >= 0)\n        return x % mod;\n    else\n        return x\
+    \ % mod + mod;\n}\n"
   code: "#pragma once\n\n#include <cassert>\n\ntemplate <typename T> constexpr T normalize_mod(const\
-    \ T x, const T mod) {\n    assert(mod > 0);\n    if (x > 0)\n        return x\
-    \ % mod;\n    else\n        x % mod + mod;\n}"
+    \ T x, const T mod) {\n    assert(mod > 0);\n    if (x >= 0)\n        return x\
+    \ % mod;\n    else\n        return x % mod + mod;\n}"
   dependsOn: []
   isVerificationFile: false
   path: math/normalize_mod.cpp
-  requiredBy: []
-  timestamp: '2021-11-14 15:49:17+09:00'
+  requiredBy:
+  - math/pow_mod.cpp
+  timestamp: '2021-11-14 16:09:23+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math/normalize_mod.cpp
