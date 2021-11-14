@@ -2,7 +2,7 @@
 
 #include "../utility/int_alias.cpp"
 #include "barrett.cpp"
-#include "nomarlize_mod.cpp"
+#include "normalize_mod.cpp"
 #include <cassert>
 #include <type_traits>
 
