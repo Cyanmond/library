@@ -15,6 +15,9 @@ data:
     path: debug/debug_impl.cpp
     title: debug/debug_impl.cpp
   - icon: ':warning:'
+    path: math/barrett.cpp
+    title: math/barrett.cpp
+  - icon: ':warning:'
     path: utility/int_infinity.cpp
     title: utility/int_infinity.cpp
   - icon: ':warning:'
@@ -110,6 +113,7 @@ data:
   path: utility/int_alias.cpp
   requiredBy:
   - debug/debug_impl.cpp
+  - math/barrett.cpp
   - data-structure/segmenttree.cpp
   - data-structure/lazysegmenttree.cpp
   - data-structure/lazysegmenttree_utility.cpp

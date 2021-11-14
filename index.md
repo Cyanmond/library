@@ -20,6 +20,15 @@ data:
   - name: math
     pages:
     - icon: ':warning:'
+      path: math/barrett.cpp
+      title: math/barrett.cpp
+    - icon: ':warning:'
+      path: math/normalize_mod.cpp
+      title: math/normalize_mod.cpp
+    - icon: ':warning:'
+      path: math/pow_mod.cpp
+      title: math/pow_mod.cpp
+    - icon: ':warning:'
       path: math/static_modint.cpp
       title: math/static_modint.cpp
   - name: utility
@@ -30,6 +39,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: utility/eoln.cpp
       title: utility/eoln.cpp
+    - icon: ':warning:'
+      path: utility/int128_alias.cpp
+      title: utility/int128_alias.cpp
     - icon: ':heavy_check_mark:'
       path: utility/int_alias.cpp
       title: utility/int_alias.cpp
