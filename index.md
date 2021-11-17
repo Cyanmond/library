@@ -14,7 +14,7 @@ data:
     - icon: ':warning:'
       path: data-structure/lazysegmenttree_utility.cpp
       title: data-structure/lazysegmenttree_utility.cpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data-structure/segmenttree.cpp
       title: data-structure/segmenttree.cpp
   - name: debug
@@ -41,13 +41,13 @@ data:
     - icon: ':warning:'
       path: utility/difference.cpp
       title: utility/difference.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: utility/eoln.cpp
       title: utility/eoln.cpp
     - icon: ':warning:'
       path: utility/int128_alias.cpp
       title: utility/int128_alias.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: utility/int_alias.cpp
       title: utility/int_alias.cpp
     - icon: ':warning:'
@@ -62,7 +62,7 @@ data:
     - icon: ':warning:'
       path: utility/rec_lambda.cpp
       title: utility/rec_lambda.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: utility/rep.cpp
       title: utility/rep.cpp
     - icon: ':warning:'
@@ -71,7 +71,7 @@ data:
     - icon: ':warning:'
       path: utility/revrep.cpp
       title: utility/revrep.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: utility/scan.cpp
       title: utility/scan.cpp
     - icon: ':warning:'
@@ -95,5 +95,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/library-checker/many_aplusb.test.cpp
       title: verify/library-checker/many_aplusb.test.cpp
+    - icon: ':x:'
+      path: verify/library-checker/point_add_range_sum.test.cpp
+      title: verify/library-checker/point_add_range_sum.test.cpp
 layout: toppage
 ---

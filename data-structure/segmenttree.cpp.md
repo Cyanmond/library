@@ -1,14 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: utility/int_alias.cpp
     title: utility/int_alias.cpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: verify/library-checker/point_add_range_sum.test.cpp
+    title: verify/library-checker/point_add_range_sum.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"data-structure/segmenttree.cpp\"\n\n#line 2 \"utility/int_alias.cpp\"\
@@ -112,8 +115,9 @@ data:
   path: data-structure/segmenttree.cpp
   requiredBy: []
   timestamp: '2021-11-12 23:02:31+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - verify/library-checker/point_add_range_sum.test.cpp
 documentation_of: data-structure/segmenttree.cpp
 layout: document
 redirect_from:
