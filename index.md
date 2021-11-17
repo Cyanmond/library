@@ -89,6 +89,11 @@ data:
     - icon: ':warning:'
       path: utility/zip_sort.cpp
       title: utility/zip_sort.cpp
+  - name: verify/library-checker
+    pages:
+    - icon: ':warning:'
+      path: verify/library-checker/point_add_range_sum_1.cpp
+      title: verify/library-checker/point_add_range_sum_1.cpp
   verificationCategories:
   - name: verify/library-checker
     pages:

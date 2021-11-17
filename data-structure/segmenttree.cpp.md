@@ -4,7 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: utility/int_alias.cpp
     title: utility/int_alias.cpp
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: verify/library-checker/point_add_range_sum_1.cpp
+    title: verify/library-checker/point_add_range_sum_1.cpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
@@ -110,7 +113,8 @@ data:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: data-structure/segmenttree.cpp
-  requiredBy: []
+  requiredBy:
+  - verify/library-checker/point_add_range_sum_1.cpp
   timestamp: '2021-11-12 23:02:31+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
