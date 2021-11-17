@@ -12,9 +12,9 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"utility/int_binary_search.cpp\"\n\n#line 2 \"utility/difference.cpp\"\
-    \n\ntemplate <typename T> constexpr T difference(const T a,const T b){\n    return\
-    \ (a > b) ? (a - b) : (b - a);\n}\n#line 4 \"utility/int_binary_search.cpp\"\n\
-    #include <type_traits>\n\ntemplate <typename T, class F> constexpr T intbinarysearch(T\
+    \n\ntemplate <typename T> constexpr T difference(const T a, const T b) {\n   \
+    \ return (a > b) ? (a - b) : (b - a);\n}\n#line 4 \"utility/int_binary_search.cpp\"\
+    \n#include <type_traits>\n\ntemplate <typename T, class F> constexpr T intbinarysearch(T\
     \ ok, T ng, const F &f) {\n    static_assert(std::is_integral_v<T>);\n    while\
     \ (difference(ok, ng) != 0) {\n        const auto mid = (ok + ng) >> 1;\n    \
     \    (f(mid) ? ok : ng) = mid;\n    }\n    return ok;\n}\n"
@@ -28,7 +28,7 @@ data:
   isVerificationFile: false
   path: utility/int_binary_search.cpp
   requiredBy: []
-  timestamp: '2021-11-14 23:32:43+09:00'
+  timestamp: '2021-11-17 22:17:39+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/int_binary_search.cpp
