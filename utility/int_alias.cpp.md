@@ -47,9 +47,6 @@ data:
   - icon: ':warning:'
     path: utility/zip_sort.cpp
     title: utility/zip_sort.cpp
-  - icon: ':warning:'
-    path: verify/library-checker/point_add_range_sum_1.cpp
-    title: verify/library-checker/point_add_range_sum_1.cpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library-checker/many_aplusb.test.cpp
@@ -125,7 +122,6 @@ data:
   - math/static_modint.cpp
   - math/pow_mod.cpp
   - math/barrett.cpp
-  - verify/library-checker/point_add_range_sum_1.cpp
   - data-structure/segmenttree.cpp
   - data-structure/lazysegmenttree.cpp
   - data-structure/lazysegmenttree_utility.cpp

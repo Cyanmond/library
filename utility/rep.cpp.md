@@ -4,10 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: utility/int_alias.cpp
     title: utility/int_alias.cpp
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: verify/library-checker/point_add_range_sum_1.cpp
-    title: verify/library-checker/point_add_range_sum_1.cpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library-checker/many_aplusb.test.cpp
@@ -45,8 +42,7 @@ data:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: utility/rep.cpp
-  requiredBy:
-  - verify/library-checker/point_add_range_sum_1.cpp
+  requiredBy: []
   timestamp: '2021-11-04 00:40:38+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

@@ -1,10 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: verify/library-checker/point_add_range_sum_1.cpp
-    title: verify/library-checker/point_add_range_sum_1.cpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library-checker/many_aplusb.test.cpp
@@ -21,8 +18,7 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: utility/scan.cpp
-  requiredBy:
-  - verify/library-checker/point_add_range_sum_1.cpp
+  requiredBy: []
   timestamp: '2021-11-03 23:24:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
