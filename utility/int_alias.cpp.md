@@ -21,6 +21,9 @@ data:
     path: math/pow_mod.cpp
     title: math/pow_mod.cpp
   - icon: ':warning:'
+    path: math/static_modint.cpp
+    title: math/static_modint.cpp
+  - icon: ':warning:'
     path: utility/int_infinity.cpp
     title: utility/int_infinity.cpp
   - icon: ':warning:'
@@ -116,6 +119,7 @@ data:
   path: utility/int_alias.cpp
   requiredBy:
   - debug/debug_impl.cpp
+  - math/static_modint.cpp
   - math/pow_mod.cpp
   - math/barrett.cpp
   - data-structure/segmenttree.cpp
