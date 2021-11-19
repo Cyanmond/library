@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-template <class T> T scan() {
+template <typename T> inline T scan() {
     T x;
     std::cin >> x;
     return x;
