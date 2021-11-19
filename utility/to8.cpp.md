@@ -25,17 +25,20 @@ data:
     \ d;\n        const value_type h, w, maxh, maxw;\n        constexpr to8_iterator(const\
     \ value_type h_, const value_type w_, const value_type maxh_,\n              \
     \                 const value_type maxw_) noexcept\n            : d(0), h(h_),\
-    \ w(w_), maxh(maxh_), maxw(maxw_) {}\n        constexpr void operator++() noexcept\
-    \ {\n            do {\n                ++d;\n            } while (d != 8 and (h\
-    \ + dx[d] == minus1 or h + dx[d] == maxh or w + dy[d] == minus1 or\n         \
-    \                        w + dy[d] == maxw));\n        }\n        constexpr bool\
-    \ operator!=(const int other) const noexcept { return d != other; }\n        constexpr\
-    \ std::pair<value_type, value_type> operator*() const noexcept {\n           \
-    \ return {h + dx[d], w + dy[d]};\n        }\n    };\n\n    const to8_iterator\
-    \ i;\n\n  public:\n    constexpr to8(const value_type h, const value_type w, const\
-    \ value_type maxh,\n                  const value_type maxw) noexcept\n      \
-    \  : i(h, w, maxh, maxw) {}\n    constexpr to8_iterator begin() const noexcept\
-    \ { return i; }\n    constexpr int end() const noexcept { return 8; }\n};\n"
+    \ w(w_), maxh(maxh_), maxw(maxw_) {\n                while (d != 8 and (h + dx[d]\
+    \ == minus1 or h + dx[d] == maxh or w + dy[d] == minus1 or\n                 \
+    \                w + dy[d] == maxw)) {\n                    ++d;\n           \
+    \     }\n            }\n        constexpr void operator++() noexcept {\n     \
+    \       do {\n                ++d;\n            } while (d != 8 and (h + dx[d]\
+    \ == minus1 or h + dx[d] == maxh or w + dy[d] == minus1 or\n                 \
+    \                w + dy[d] == maxw));\n        }\n        constexpr bool operator!=(const\
+    \ int other) const noexcept { return d != other; }\n        constexpr std::pair<value_type,\
+    \ value_type> operator*() const noexcept {\n            return {h + dx[d], w +\
+    \ dy[d]};\n        }\n    };\n\n    const to8_iterator i;\n\n  public:\n    constexpr\
+    \ to8(const value_type h, const value_type w, const value_type maxh,\n       \
+    \           const value_type maxw) noexcept\n        : i(h, w, maxh, maxw) {}\n\
+    \    constexpr to8_iterator begin() const noexcept { return i; }\n    constexpr\
+    \ int end() const noexcept { return 8; }\n};\n"
   code: "#pragma once\n\n#include \"../utility/int_alias.cpp\"\n#include <array>\n\
     #include <limits>\n#include <type_traits>\n\nclass to8 {\n    using value_type\
     \ = usize;\n    static_assert(std::is_unsigned_v<value_type>);\n    static constexpr\
@@ -46,11 +49,14 @@ data:
     \ value_type h, w, maxh, maxw;\n        constexpr to8_iterator(const value_type\
     \ h_, const value_type w_, const value_type maxh_,\n                         \
     \      const value_type maxw_) noexcept\n            : d(0), h(h_), w(w_), maxh(maxh_),\
-    \ maxw(maxw_) {}\n        constexpr void operator++() noexcept {\n           \
-    \ do {\n                ++d;\n            } while (d != 8 and (h + dx[d] == minus1\
-    \ or h + dx[d] == maxh or w + dy[d] == minus1 or\n                           \
-    \      w + dy[d] == maxw));\n        }\n        constexpr bool operator!=(const\
-    \ int other) const noexcept { return d != other; }\n        constexpr std::pair<value_type,\
+    \ maxw(maxw_) {\n                while (d != 8 and (h + dx[d] == minus1 or h +\
+    \ dx[d] == maxh or w + dy[d] == minus1 or\n                                 w\
+    \ + dy[d] == maxw)) {\n                    ++d;\n                }\n         \
+    \   }\n        constexpr void operator++() noexcept {\n            do {\n    \
+    \            ++d;\n            } while (d != 8 and (h + dx[d] == minus1 or h +\
+    \ dx[d] == maxh or w + dy[d] == minus1 or\n                                 w\
+    \ + dy[d] == maxw));\n        }\n        constexpr bool operator!=(const int other)\
+    \ const noexcept { return d != other; }\n        constexpr std::pair<value_type,\
     \ value_type> operator*() const noexcept {\n            return {h + dx[d], w +\
     \ dy[d]};\n        }\n    };\n\n    const to8_iterator i;\n\n  public:\n    constexpr\
     \ to8(const value_type h, const value_type w, const value_type maxh,\n       \
@@ -62,7 +68,7 @@ data:
   isVerificationFile: false
   path: utility/to8.cpp
   requiredBy: []
-  timestamp: '2021-11-04 11:05:03+09:00'
+  timestamp: '2021-11-19 23:44:30+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/to8.cpp
