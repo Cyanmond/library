@@ -20,12 +20,11 @@ template <class M> class SegmentTree {
         m_nodes.assign(m_size << 1, M::identity());
     }
 
-    SegmentTree(const size_type n, const value_type v) {
-        *this = SegmentTree(n, std::vector(n, v));
+    SegmentTree(const usize n, const value_type v) {
+        *this = SegmentTree(std::vector(n, v));
     }
 
-    SegmentTree(const size_type n, const std::vector<value_type> &s)
-        : m_n(n), m_size(ceil_pow2(n)) {
+    SegmentTree(const std::vector<value_type> &s) : m_n(s.size()), m_size(ceil_pow2(s.size())) {
         m_nodes.assign(m_size << 1, M::identity());
         std::copy(s.begin(), s.end(), m_nodes.begin() + m_size);
         for (size_type i = m_size - 1; i != 0; --i)
