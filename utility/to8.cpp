@@ -17,7 +17,12 @@ class to8 {
         const value_type h, w, maxh, maxw;
         constexpr to8_iterator(const value_type h_, const value_type w_, const value_type maxh_,
                                const value_type maxw_) noexcept
-            : d(0), h(h_), w(w_), maxh(maxh_), maxw(maxw_) {}
+            : d(0), h(h_), w(w_), maxh(maxh_), maxw(maxw_) {
+                while (d != 8 and (h + dx[d] == minus1 or h + dx[d] == maxh or w + dy[d] == minus1 or
+                                 w + dy[d] == maxw)) {
+                    ++d;
+                }
+            }
         constexpr void operator++() noexcept {
             do {
                 ++d;
