@@ -88,12 +88,12 @@ data:
     \ last_) noexcept : first(first_), last(last_) {}\n    constexpr rep_iterator\
     \ begin() const noexcept { return first; }\n    constexpr usize end() const noexcept\
     \ { return last; }\n};\n#line 2 \"utility/scan.cpp\"\n\n#include <iostream>\n\n\
-    template <class T> T scan() {\n    T x;\n    std::cin >> x;\n    return x;\n}\n\
-    #line 8 \"verify/library-checker/point_add_range_sum.test.cpp\"\n\nstruct monoid\
-    \ {\n    using value_type = i64;\n    static value_type operation(const value_type\
-    \ a, const value_type b) {\n        return a + b;\n    }\n    static value_type\
-    \ identity() {\n        return 0;\n    }\n};\n\nint main(void) {\n    const usize\
-    \ N = scan<usize>();\n    const usize Q = scan<usize>();\n    std::vector<i64>\
+    template <typename T> inline T scan() {\n    T x;\n    std::cin >> x;\n    return\
+    \ x;\n}\n#line 8 \"verify/library-checker/point_add_range_sum.test.cpp\"\n\nstruct\
+    \ monoid {\n    using value_type = i64;\n    static value_type operation(const\
+    \ value_type a, const value_type b) {\n        return a + b;\n    }\n    static\
+    \ value_type identity() {\n        return 0;\n    }\n};\n\nint main(void) {\n\
+    \    const usize N = scan<usize>();\n    const usize Q = scan<usize>();\n    std::vector<i64>\
     \ A(N);\n    for (auto &e : A)\n        e = scan<i64>();\n\n    SegmentTree<monoid>\
     \ s(A);\n    for ([[maybe_unused]] const auto i : rep(0, Q)) {\n        const\
     \ int t = scan<int>();\n        if (t == 0) {\n            const usize p = scan<usize>();\n\
@@ -125,7 +125,7 @@ data:
   isVerificationFile: true
   path: verify/library-checker/point_add_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2021-11-17 23:18:14+09:00'
+  timestamp: '2021-11-19 22:47:54+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: verify/library-checker/point_add_range_sum.test.cpp

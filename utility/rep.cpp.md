@@ -49,8 +49,8 @@ data:
   timestamp: '2021-11-04 00:40:38+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - verify/library-checker/many_aplusb.test.cpp
   - verify/library-checker/point_add_range_sum.test.cpp
+  - verify/library-checker/many_aplusb.test.cpp
 documentation_of: utility/rep.cpp
 layout: document
 redirect_from:

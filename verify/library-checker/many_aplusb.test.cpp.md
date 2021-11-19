@@ -40,11 +40,12 @@ data:
     \ last_) noexcept : first(first_), last(last_) {}\n    constexpr rep_iterator\
     \ begin() const noexcept { return first; }\n    constexpr usize end() const noexcept\
     \ { return last; }\n};\n#line 2 \"utility/scan.cpp\"\n\n#line 4 \"utility/scan.cpp\"\
-    \n\ntemplate <class T> T scan() {\n    T x;\n    std::cin >> x;\n    return x;\n\
-    }\n#line 10 \"verify/library-checker/many_aplusb.test.cpp\"\n\nint main(void)\
-    \ {\n    const usize T = scan<usize>();\n    std::vector<i64> A(T), B(T);\n  \
-    \  for (const auto i : rep(0, T)) {\n        A[i] = scan<i64>();\n        B[i]\
-    \ = scan<i64>();\n        std::cout << A[i] + B[i] << eoln;\n    }\n}\n"
+    \n\ntemplate <typename T> inline T scan() {\n    T x;\n    std::cin >> x;\n  \
+    \  return x;\n}\n#line 10 \"verify/library-checker/many_aplusb.test.cpp\"\n\n\
+    int main(void) {\n    const usize T = scan<usize>();\n    std::vector<i64> A(T),\
+    \ B(T);\n    for (const auto i : rep(0, T)) {\n        A[i] = scan<i64>();\n \
+    \       B[i] = scan<i64>();\n        std::cout << A[i] + B[i] << eoln;\n    }\n\
+    }\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/many_aplusb\"\n\n#include\
     \ <iostream>\n#include <vector>\n\n#include \"../../utility/eoln.cpp\"\n#include\
     \ \"../../utility/int_alias.cpp\"\n#include \"../../utility/rep.cpp\"\n#include\
@@ -60,7 +61,7 @@ data:
   isVerificationFile: true
   path: verify/library-checker/many_aplusb.test.cpp
   requiredBy: []
-  timestamp: '2021-11-05 13:56:22+09:00'
+  timestamp: '2021-11-19 22:47:54+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library-checker/many_aplusb.test.cpp
