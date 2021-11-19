@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utility/int_alias.cpp
     title: utility/int_alias.cpp
   _extendedRequiredBy: []
@@ -9,12 +9,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/library-checker/many_aplusb.test.cpp
     title: verify/library-checker/many_aplusb.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/library-checker/point_add_range_sum.test.cpp
     title: verify/library-checker/point_add_range_sum.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"utility/rep.cpp\"\n\n#line 2 \"utility/int_alias.cpp\"\n\
@@ -47,7 +47,7 @@ data:
   path: utility/rep.cpp
   requiredBy: []
   timestamp: '2021-11-04 00:40:38+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library-checker/point_add_range_sum.test.cpp
   - verify/library-checker/many_aplusb.test.cpp

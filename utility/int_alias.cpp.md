@@ -8,7 +8,7 @@ data:
   - icon: ':warning:'
     path: data-structure/lazysegmenttree_utility.cpp
     title: data-structure/lazysegmenttree_utility.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/segmenttree.cpp
     title: data-structure/segmenttree.cpp
   - icon: ':warning:'
@@ -29,7 +29,7 @@ data:
   - icon: ':warning:'
     path: utility/int_literal.cpp
     title: utility/int_literal.cpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utility/rep.cpp
     title: utility/rep.cpp
   - icon: ':warning:'
@@ -51,12 +51,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/library-checker/many_aplusb.test.cpp
     title: verify/library-checker/many_aplusb.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/library-checker/point_add_range_sum.test.cpp
     title: verify/library-checker/point_add_range_sum.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: '#line 2 "utility/int_alias.cpp"
@@ -137,7 +137,7 @@ data:
   - data-structure/lazysegmenttree_utility.cpp
   - data-structure/lazysegmenttree.cpp
   timestamp: '2021-11-03 23:24:28+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library-checker/point_add_range_sum.test.cpp
   - verify/library-checker/many_aplusb.test.cpp

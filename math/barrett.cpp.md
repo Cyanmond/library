@@ -4,7 +4,7 @@ data:
   - icon: ':warning:'
     path: utility/int128_alias.cpp
     title: utility/int128_alias.cpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: utility/int_alias.cpp
     title: utility/int_alias.cpp
   _extendedRequiredBy:
