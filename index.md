@@ -28,6 +28,9 @@ data:
       path: math/barrett.cpp
       title: math/barrett.cpp
     - icon: ':warning:'
+      path: math/is_prime.cpp
+      title: math/is_prime.cpp
+    - icon: ':warning:'
       path: math/normalize_mod.cpp
       title: math/normalize_mod.cpp
     - icon: ':warning:'
@@ -36,6 +39,9 @@ data:
     - icon: ':warning:'
       path: math/static_modint.cpp
       title: math/static_modint.cpp
+    - icon: ':warning:'
+      path: math/static_modint_utility.cpp
+      title: math/static_modint_utility.cpp
   - name: utility
     pages:
     - icon: ':warning:'

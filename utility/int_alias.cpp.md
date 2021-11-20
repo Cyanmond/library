@@ -24,6 +24,9 @@ data:
     path: math/static_modint.cpp
     title: math/static_modint.cpp
   - icon: ':warning:'
+    path: math/static_modint_utility.cpp
+    title: math/static_modint_utility.cpp
+  - icon: ':warning:'
     path: utility/int_infinity.cpp
     title: utility/int_infinity.cpp
   - icon: ':warning:'
@@ -128,6 +131,7 @@ data:
   - math/pow_mod.cpp
   - math/static_modint.cpp
   - math/barrett.cpp
+  - math/static_modint_utility.cpp
   - utility/scan_vector.cpp
   - utility/to4.cpp
   - utility/zip_sort.cpp

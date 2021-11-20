@@ -78,19 +78,20 @@ data:
     \ 1;\n        while (res < n_)\n            res <<= 1;\n        return res;\n\
     \    }\n\n    void internal_update(const size_type i) {\n        m_nodes[i] =\
     \ M::operation(m_nodes[i << 1], m_nodes[i << 1 | 1]);\n    }\n};\n#line 2 \"utility/eoln.cpp\"\
-    \n\nconstexpr char eoln = '\\n';\n#line 2 \"utility/rep.cpp\"\n\n#line 4 \"utility/rep.cpp\"\
+    \n\nconstexpr char eoln = '\\n';\n#line 2 \"utility/rep.cpp\"\n\n#line 5 \"utility/rep.cpp\"\
     \n\nclass rep {\n    struct rep_iterator {\n        usize itr;\n        constexpr\
     \ rep_iterator(const usize pos) noexcept : itr(pos) {}\n        constexpr void\
-    \ operator++() noexcept { ++itr; }\n        constexpr bool operator!=(const usize\
-    \ &other) const noexcept { return itr != other; }\n        constexpr usize operator*()\
-    \ const noexcept { return itr; }\n    };\n    const rep_iterator first;\n    const\
-    \ usize last;\n\n  public:\n    constexpr rep(const usize first_, const usize\
-    \ last_) noexcept : first(first_), last(last_) {}\n    constexpr rep_iterator\
-    \ begin() const noexcept { return first; }\n    constexpr usize end() const noexcept\
-    \ { return last; }\n};\n#line 2 \"utility/scan.cpp\"\n\n#include <iostream>\n\n\
-    template <typename T> inline T scan() {\n    T x;\n    std::cin >> x;\n    return\
-    \ x;\n}\n#line 8 \"verify/library-checker/point_add_range_sum.test.cpp\"\n\nstruct\
-    \ monoid {\n    using value_type = i64;\n    static value_type operation(const\
+    \ operator++() noexcept {\n            ++itr;\n        }\n        constexpr bool\
+    \ operator!=(const usize &other) const noexcept {\n            return itr != other;\n\
+    \        }\n        constexpr usize operator*() const noexcept {\n           \
+    \ return itr;\n        }\n    };\n    const rep_iterator first;\n    const usize\
+    \ last;\n\n  public:\n    constexpr rep(const usize first_, const usize last_)\
+    \ noexcept\n        : first(first_), last(std::max(first_, last_)) {}\n    constexpr\
+    \ rep_iterator begin() const noexcept {\n        return first;\n    }\n    constexpr\
+    \ usize end() const noexcept {\n        return last;\n    }\n};\n#line 2 \"utility/scan.cpp\"\
+    \n\n#include <iostream>\n\ntemplate <typename T> inline T scan() {\n    T x;\n\
+    \    std::cin >> x;\n    return x;\n}\n#line 8 \"verify/library-checker/point_add_range_sum.test.cpp\"\
+    \n\nstruct monoid {\n    using value_type = i64;\n    static value_type operation(const\
     \ value_type a, const value_type b) {\n        return a + b;\n    }\n    static\
     \ value_type identity() {\n        return 0;\n    }\n};\n\nint main(void) {\n\
     \    const usize N = scan<usize>();\n    const usize Q = scan<usize>();\n    std::vector<i64>\
@@ -125,7 +126,7 @@ data:
   isVerificationFile: true
   path: verify/library-checker/point_add_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2021-11-19 23:23:28+09:00'
+  timestamp: '2021-11-21 02:00:13+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library-checker/point_add_range_sum.test.cpp

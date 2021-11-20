@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: utility/scan_vector.cpp
+    title: utility/scan_vector.cpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library-checker/many_aplusb.test.cpp
@@ -21,7 +24,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: utility/scan.cpp
-  requiredBy: []
+  requiredBy:
+  - utility/scan_vector.cpp
   timestamp: '2021-11-19 22:47:54+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
