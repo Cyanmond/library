@@ -34,6 +34,9 @@ data:
       path: math/normalize_mod.cpp
       title: math/normalize_mod.cpp
     - icon: ':warning:'
+      path: math/pow_int.cpp
+      title: math/pow_int.cpp
+    - icon: ':warning:'
       path: math/pow_mod.cpp
       title: math/pow_mod.cpp
     - icon: ':warning:'
