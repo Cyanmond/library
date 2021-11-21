@@ -9,6 +9,9 @@ data:
   - name: data-structure
     pages:
     - icon: ':warning:'
+      path: data-structure/lazy_segmenttree.cpp
+      title: data-structure/lazy_segmenttree.cpp
+    - icon: ':warning:'
       path: data-structure/lazysegmenttree.cpp
       title: data-structure/lazysegmenttree.cpp
     - icon: ':warning:'

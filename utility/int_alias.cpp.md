@@ -3,6 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
+    path: data-structure/lazy_segmenttree.cpp
+    title: data-structure/lazy_segmenttree.cpp
+  - icon: ':warning:'
     path: data-structure/lazysegmenttree.cpp
     title: data-structure/lazysegmenttree.cpp
   - icon: ':warning:'
@@ -143,6 +146,7 @@ data:
   - utility/rep.cpp
   - data-structure/segmenttree.cpp
   - data-structure/lazysegmenttree_utility.cpp
+  - data-structure/lazy_segmenttree.cpp
   - data-structure/lazysegmenttree.cpp
   timestamp: '2021-11-03 23:24:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
