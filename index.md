@@ -25,6 +25,11 @@ data:
     - icon: ':warning:'
       path: debug/debug_impl.cpp
       title: debug/debug_impl.cpp
+  - name: graph
+    pages:
+    - icon: ':warning:'
+      path: graph/union-find.cpp
+      title: graph/union-find.cpp
   - name: math
     pages:
     - icon: ':warning:'

@@ -18,6 +18,9 @@ data:
     path: debug/debug_impl.cpp
     title: debug/debug_impl.cpp
   - icon: ':warning:'
+    path: graph/union-find.cpp
+    title: graph/union-find.cpp
+  - icon: ':warning:'
     path: math/barrett.cpp
     title: math/barrett.cpp
   - icon: ':warning:'
@@ -135,6 +138,7 @@ data:
   - math/static_modint.cpp
   - math/barrett.cpp
   - math/static_modint_utility.cpp
+  - graph/union-find.cpp
   - utility/scan_vector.cpp
   - utility/to4.cpp
   - utility/zip_sort.cpp
