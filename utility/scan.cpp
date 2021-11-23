@@ -27,7 +27,7 @@ template <typename T, class... Args> auto scan_vec(const usize n, Args... args) 
 template <typename T, class F> std::vector<T> scan_vec_f(const usize n, const F &f) {
     std::vector<T> res;
     for (auto &e : res)
-        e = f(scan<t>());
+        e = f(scan<T>());
     return res;
 }
 
