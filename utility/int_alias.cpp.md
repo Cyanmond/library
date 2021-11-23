@@ -47,9 +47,9 @@ data:
   - icon: ':warning:'
     path: utility/revrep.cpp
     title: utility/revrep.cpp
-  - icon: ':warning:'
-    path: utility/scan_vector.cpp
-    title: utility/scan_vector.cpp
+  - icon: ':heavy_check_mark:'
+    path: utility/scan.cpp
+    title: utility/scan.cpp
   - icon: ':warning:'
     path: utility/to4.cpp
     title: utility/to4.cpp
@@ -139,11 +139,11 @@ data:
   - math/barrett.cpp
   - math/static_modint_utility.cpp
   - graph/union-find.cpp
-  - utility/scan_vector.cpp
   - utility/to4.cpp
   - utility/zip_sort.cpp
   - utility/to8.cpp
   - utility/revrep.cpp
+  - utility/scan.cpp
   - utility/int_literal.cpp
   - utility/repstep.cpp
   - utility/int_infinity.cpp

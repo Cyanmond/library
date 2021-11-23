@@ -41,8 +41,18 @@ data:
     \ const usize last_) noexcept\n        : first(first_), last(std::max(first_,\
     \ last_)) {}\n    constexpr rep_iterator begin() const noexcept {\n        return\
     \ first;\n    }\n    constexpr usize end() const noexcept {\n        return last;\n\
-    \    }\n};\n#line 2 \"utility/scan.cpp\"\n\n#line 4 \"utility/scan.cpp\"\n\ntemplate\
+    \    }\n};\n#line 2 \"utility/scan.cpp\"\n\n#line 6 \"utility/scan.cpp\"\n\ntemplate\
     \ <typename T> inline T scan() {\n    T x;\n    std::cin >> x;\n    return x;\n\
+    }\n\ntemplate <typename T> std::vector<T> scan_vec(const usize n) {\n    std::vector<T>\
+    \ res(n);\n    for (auto &e : res)\n        e = scan<T>();\n    return res;\n\
+    }\n\ntemplate <typename T, class... Args> auto scan_vec(const usize n, Args...\
+    \ args) {\n    std::vector<decltype(scan_vec(args...))> res(n);\n    for (auto\
+    \ &vec : res)\n        vec = scan_vec(args...);\n    return res;\n}\n\ntemplate\
+    \ <typename T, class F> std::vector<T> scan_vec_f(const usize n, const F &f) {\n\
+    \    std::vector<T> res;\n    for (auto &e : res)\n        e = f(scan<T>());\n\
+    \    return res;\n}\n\ntemplate <typename T, class... Args> auto scan_vec_f(const\
+    \ usize n, Args... args) {\n    std::vector<decltype(scan_vec_f(args...))> res(n);\n\
+    \    for (auto &vec : res)\n        vec = scan_vec_f(args...);\n    return res;\n\
     }\n#line 10 \"verify/library-checker/many_aplusb.test.cpp\"\n\nint main(void)\
     \ {\n    const usize T = scan<usize>();\n    std::vector<i64> A(T), B(T);\n  \
     \  for (const auto i : rep(0, T)) {\n        A[i] = scan<i64>();\n        B[i]\
@@ -62,7 +72,7 @@ data:
   isVerificationFile: true
   path: verify/library-checker/many_aplusb.test.cpp
   requiredBy: []
-  timestamp: '2021-11-21 02:00:13+09:00'
+  timestamp: '2021-11-23 18:07:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library-checker/many_aplusb.test.cpp

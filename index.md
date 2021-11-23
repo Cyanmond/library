@@ -92,9 +92,6 @@ data:
       path: utility/scan.cpp
       title: utility/scan.cpp
     - icon: ':warning:'
-      path: utility/scan_vector.cpp
-      title: utility/scan_vector.cpp
-    - icon: ':warning:'
       path: utility/setmax.cpp
       title: utility/setmax.cpp
     - icon: ':warning:'
