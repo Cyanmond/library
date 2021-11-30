@@ -8,7 +8,7 @@ template <class M> class StaticModintUtility {
     static inline usize size = 1;
     static inline std::vector<M> fact = {1, 1};
     static inline std::vector<M> inv = {0, 1};
-    static inline std::vector<M> inv_fact{1, 1};
+    static inline std::vector<M> inv_fact = {1, 1};
 
     static void reserve(const usize size_) {
         if (size < size_) {
