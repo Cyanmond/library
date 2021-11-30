@@ -19,7 +19,7 @@ data:
     #line 4 \"math/static_modint_utility.cpp\"\n#include <cassert>\n#include <vector>\n\
     \ntemplate <class M> class StaticModintUtility {\n    static inline usize size\
     \ = 1;\n    static inline std::vector<M> fact = {1, 1};\n    static inline std::vector<M>\
-    \ inv = {0, 1};\n    static inline std::vector<M> inv_fact{1, 1};\n\n    static\
+    \ inv = {0, 1};\n    static inline std::vector<M> inv_fact = {1, 1};\n\n    static\
     \ void reserve(const usize size_) {\n        if (size < size_) {\n           \
     \ for (usize i = size + 1; i <= size_; ++i) {\n                fact[i] = fact[i\
     \ - 1] * M(i);\n                inv[i] = -M(M::mod() / i) * inv[i - 1];\n    \
@@ -39,8 +39,8 @@ data:
     #include <vector>\n\ntemplate <class M> class StaticModintUtility {\n    static\
     \ inline usize size = 1;\n    static inline std::vector<M> fact = {1, 1};\n  \
     \  static inline std::vector<M> inv = {0, 1};\n    static inline std::vector<M>\
-    \ inv_fact{1, 1};\n\n    static void reserve(const usize size_) {\n        if\
-    \ (size < size_) {\n            for (usize i = size + 1; i <= size_; ++i) {\n\
+    \ inv_fact = {1, 1};\n\n    static void reserve(const usize size_) {\n       \
+    \ if (size < size_) {\n            for (usize i = size + 1; i <= size_; ++i) {\n\
     \                fact[i] = fact[i - 1] * M(i);\n                inv[i] = -M(M::mod()\
     \ / i) * inv[i - 1];\n                inv_fact[i] = inv_fact[i - 1] * inv[i];\n\
     \            }\n            size = size_;\n        }\n    }\n\n  public:\n   \
@@ -60,7 +60,7 @@ data:
   isVerificationFile: false
   path: math/static_modint_utility.cpp
   requiredBy: []
-  timestamp: '2021-11-20 14:42:59+09:00'
+  timestamp: '2021-11-30 20:43:23+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math/static_modint_utility.cpp
