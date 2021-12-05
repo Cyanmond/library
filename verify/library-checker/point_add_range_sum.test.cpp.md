@@ -93,19 +93,19 @@ data:
     \ <iostream>\n#line 6 \"utility/scan.cpp\"\n\ntemplate <typename T> inline T scan()\
     \ {\n    T x;\n    std::cin >> x;\n    return x;\n}\n\ntemplate <typename T> std::vector<T>\
     \ scan_vec(const usize n) {\n    std::vector<T> res(n);\n    for (auto &e : res)\n\
-    \        e = scan<T>();\n    return res;\n}\n\ntemplate <typename T, class...\
-    \ Args> auto scan_vec(const usize n, Args... args) {\n    std::vector<decltype(scan_vec(args...))>\
-    \ res(n);\n    for (auto &vec : res)\n        vec = scan_vec(args...);\n    return\
-    \ res;\n}\n\ntemplate <typename T, class F> std::vector<T> scan_vec_f(const usize\
-    \ n, const F &f) {\n    std::vector<T> res;\n    for (auto &e : res)\n       \
-    \ e = f(scan<T>());\n    return res;\n}\n\ntemplate <typename T, class... Args>\
-    \ auto scan_vec_f(const usize n, Args... args) {\n    std::vector<decltype(scan_vec_f(args...))>\
-    \ res(n);\n    for (auto &vec : res)\n        vec = scan_vec_f(args...);\n   \
-    \ return res;\n}\n#line 8 \"verify/library-checker/point_add_range_sum.test.cpp\"\
-    \n\nstruct monoid {\n    using value_type = i64;\n    static value_type operation(const\
-    \ value_type a, const value_type b) {\n        return a + b;\n    }\n    static\
-    \ value_type identity() {\n        return 0;\n    }\n};\n\nint main(void) {\n\
-    \    const usize N = scan<usize>();\n    const usize Q = scan<usize>();\n    std::vector<i64>\
+    \        e = scan<T>();\n    return res;\n}\n\ntemplate <typename T> std::vector<std::vector<T>>\
+    \ scan_vec(const usize n, const usize m) {\n    std::vector<std::vector<T>> res(n);\n\
+    \    for (auto &vec : res)\n        vec = scan_vec<T>(m);\n    return res;\n}\n\
+    \ntemplate <typename T, class F> std::vector<T> scan_vec_f(const usize n, const\
+    \ F &f) {\n    std::vector<T> res;\n    for (auto &e : res)\n        e = f(scan<T>());\n\
+    \    return res;\n}\n\ntemplate <typename T, class F> auto scan_vec_f(const usize\
+    \ n, const usize m, const F &f) {\n    std::vector<std::vector<T>> res(n);\n \
+    \   for (auto &vec : res)\n        vec = scan_vec_f<T>(m, f);\n    return res;\n\
+    }\n#line 8 \"verify/library-checker/point_add_range_sum.test.cpp\"\n\nstruct monoid\
+    \ {\n    using value_type = i64;\n    static value_type operation(const value_type\
+    \ a, const value_type b) {\n        return a + b;\n    }\n    static value_type\
+    \ identity() {\n        return 0;\n    }\n};\n\nint main(void) {\n    const usize\
+    \ N = scan<usize>();\n    const usize Q = scan<usize>();\n    std::vector<i64>\
     \ A(N);\n    for (auto &e : A)\n        e = scan<i64>();\n\n    SegmentTree<monoid>\
     \ s(A);\n    for ([[maybe_unused]] const auto i : rep(0, Q)) {\n        const\
     \ int t = scan<int>();\n        if (t == 0) {\n            const usize p = scan<usize>();\n\
@@ -137,7 +137,7 @@ data:
   isVerificationFile: true
   path: verify/library-checker/point_add_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2021-12-05 12:32:24+09:00'
+  timestamp: '2021-12-06 01:55:19+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library-checker/point_add_range_sum.test.cpp

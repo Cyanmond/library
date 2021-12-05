@@ -26,34 +26,33 @@ data:
     \ <typename T> inline T scan() {\n    T x;\n    std::cin >> x;\n    return x;\n\
     }\n\ntemplate <typename T> std::vector<T> scan_vec(const usize n) {\n    std::vector<T>\
     \ res(n);\n    for (auto &e : res)\n        e = scan<T>();\n    return res;\n\
-    }\n\ntemplate <typename T, class... Args> auto scan_vec(const usize n, Args...\
-    \ args) {\n    std::vector<decltype(scan_vec(args...))> res(n);\n    for (auto\
-    \ &vec : res)\n        vec = scan_vec(args...);\n    return res;\n}\n\ntemplate\
-    \ <typename T, class F> std::vector<T> scan_vec_f(const usize n, const F &f) {\n\
-    \    std::vector<T> res;\n    for (auto &e : res)\n        e = f(scan<T>());\n\
-    \    return res;\n}\n\ntemplate <typename T, class... Args> auto scan_vec_f(const\
-    \ usize n, Args... args) {\n    std::vector<decltype(scan_vec_f(args...))> res(n);\n\
-    \    for (auto &vec : res)\n        vec = scan_vec_f(args...);\n    return res;\n\
-    }\n"
+    }\n\ntemplate <typename T> std::vector<std::vector<T>> scan_vec(const usize n,\
+    \ const usize m) {\n    std::vector<std::vector<T>> res(n);\n    for (auto &vec\
+    \ : res)\n        vec = scan_vec<T>(m);\n    return res;\n}\n\ntemplate <typename\
+    \ T, class F> std::vector<T> scan_vec_f(const usize n, const F &f) {\n    std::vector<T>\
+    \ res;\n    for (auto &e : res)\n        e = f(scan<T>());\n    return res;\n\
+    }\n\ntemplate <typename T, class F> auto scan_vec_f(const usize n, const usize\
+    \ m, const F &f) {\n    std::vector<std::vector<T>> res(n);\n    for (auto &vec\
+    \ : res)\n        vec = scan_vec_f<T>(m, f);\n    return res;\n}\n"
   code: "#pragma once\n\n#include \"int_alias.cpp\"\n#include <iostream>\n#include\
     \ <vector>\n\ntemplate <typename T> inline T scan() {\n    T x;\n    std::cin\
     \ >> x;\n    return x;\n}\n\ntemplate <typename T> std::vector<T> scan_vec(const\
     \ usize n) {\n    std::vector<T> res(n);\n    for (auto &e : res)\n        e =\
-    \ scan<T>();\n    return res;\n}\n\ntemplate <typename T, class... Args> auto\
-    \ scan_vec(const usize n, Args... args) {\n    std::vector<decltype(scan_vec(args...))>\
-    \ res(n);\n    for (auto &vec : res)\n        vec = scan_vec(args...);\n    return\
-    \ res;\n}\n\ntemplate <typename T, class F> std::vector<T> scan_vec_f(const usize\
-    \ n, const F &f) {\n    std::vector<T> res;\n    for (auto &e : res)\n       \
-    \ e = f(scan<T>());\n    return res;\n}\n\ntemplate <typename T, class... Args>\
-    \ auto scan_vec_f(const usize n, Args... args) {\n    std::vector<decltype(scan_vec_f(args...))>\
-    \ res(n);\n    for (auto &vec : res)\n        vec = scan_vec_f(args...);\n   \
-    \ return res;\n}"
+    \ scan<T>();\n    return res;\n}\n\ntemplate <typename T> std::vector<std::vector<T>>\
+    \ scan_vec(const usize n, const usize m) {\n    std::vector<std::vector<T>> res(n);\n\
+    \    for (auto &vec : res)\n        vec = scan_vec<T>(m);\n    return res;\n}\n\
+    \ntemplate <typename T, class F> std::vector<T> scan_vec_f(const usize n, const\
+    \ F &f) {\n    std::vector<T> res;\n    for (auto &e : res)\n        e = f(scan<T>());\n\
+    \    return res;\n}\n\ntemplate <typename T, class F> auto scan_vec_f(const usize\
+    \ n, const usize m, const F &f) {\n    std::vector<std::vector<T>> res(n);\n \
+    \   for (auto &vec : res)\n        vec = scan_vec_f<T>(m, f);\n    return res;\n\
+    }"
   dependsOn:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: utility/scan.cpp
   requiredBy: []
-  timestamp: '2021-11-23 18:07:55+09:00'
+  timestamp: '2021-12-06 01:55:19+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library-checker/point_add_range_sum.test.cpp
