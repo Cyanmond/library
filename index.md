@@ -77,6 +77,9 @@ data:
       path: utility/int_literal.cpp
       title: utility/int_literal.cpp
     - icon: ':warning:'
+      path: utility/make_vector.cpp
+      title: utility/make_vector.cpp
+    - icon: ':warning:'
       path: utility/rec_lambda.cpp
       title: utility/rec_lambda.cpp
     - icon: ':heavy_check_mark:'

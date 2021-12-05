@@ -32,8 +32,8 @@ data:
   isVerificationFile: false
   path: utility/int128_alias.cpp
   requiredBy:
-  - math/pow_mod.cpp
   - math/barrett.cpp
+  - math/pow_mod.cpp
   timestamp: '2021-11-14 15:47:05+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

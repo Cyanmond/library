@@ -38,6 +38,9 @@ data:
   - icon: ':warning:'
     path: utility/int_literal.cpp
     title: utility/int_literal.cpp
+  - icon: ':warning:'
+    path: utility/make_vector.cpp
+    title: utility/make_vector.cpp
   - icon: ':heavy_check_mark:'
     path: utility/rep.cpp
     title: utility/rep.cpp
@@ -133,25 +136,26 @@ data:
   isVerificationFile: false
   path: utility/int_alias.cpp
   requiredBy:
+  - utility/int_literal.cpp
+  - utility/make_vector.cpp
+  - utility/repstep.cpp
+  - utility/to4.cpp
+  - utility/to8.cpp
+  - utility/rep.cpp
+  - utility/revrep.cpp
+  - utility/zip_sort.cpp
+  - utility/int_infinity.cpp
+  - utility/scan.cpp
+  - graph/union-find.cpp
   - debug/debug_impl.cpp
+  - math/barrett.cpp
   - math/pow_mod.cpp
   - math/static_modint.cpp
-  - math/barrett.cpp
   - math/static_modint_utility.cpp
-  - graph/union-find.cpp
-  - utility/to4.cpp
-  - utility/zip_sort.cpp
-  - utility/to8.cpp
-  - utility/revrep.cpp
-  - utility/scan.cpp
-  - utility/int_literal.cpp
-  - utility/repstep.cpp
-  - utility/int_infinity.cpp
-  - utility/rep.cpp
+  - data-structure/lazysegmenttree.cpp
+  - data-structure/lazy_segmenttree.cpp
   - data-structure/segmenttree.cpp
   - data-structure/lazysegmenttree_utility.cpp
-  - data-structure/lazy_segmenttree.cpp
-  - data-structure/lazysegmenttree.cpp
   timestamp: '2021-11-03 23:24:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

@@ -22,8 +22,8 @@ data:
     \ {\n            --itr;\n        }\n        constexpr bool operator!=(const usize\
     \ &other) const noexcept {\n            return itr != other;\n        }\n    \
     \    constexpr usize operator*() const noexcept {\n            return itr;\n \
-    \       }\n    };\n    const revrep_iterator first;\n    const usize last;\n\n\
-    \  public:\n    constexpr revrep(const usize last_, const usize first_) noexcept\n\
+    \       }\n    };\n\n    const revrep_iterator first;\n    const usize last;\n\
+    \n  public:\n    constexpr revrep(const usize last_, const usize first_) noexcept\n\
     \        : first(first_ - 1), last(std::min(first_, last_) - 1) {}\n    constexpr\
     \ revrep_iterator begin() const noexcept {\n        return first;\n    }\n   \
     \ constexpr usize end() const noexcept {\n        return last;\n    }\n};\n"
@@ -33,7 +33,7 @@ data:
     \ operator++() noexcept {\n            --itr;\n        }\n        constexpr bool\
     \ operator!=(const usize &other) const noexcept {\n            return itr != other;\n\
     \        }\n        constexpr usize operator*() const noexcept {\n           \
-    \ return itr;\n        }\n    };\n    const revrep_iterator first;\n    const\
+    \ return itr;\n        }\n    };\n\n    const revrep_iterator first;\n    const\
     \ usize last;\n\n  public:\n    constexpr revrep(const usize last_, const usize\
     \ first_) noexcept\n        : first(first_ - 1), last(std::min(first_, last_)\
     \ - 1) {}\n    constexpr revrep_iterator begin() const noexcept {\n        return\
@@ -44,7 +44,7 @@ data:
   isVerificationFile: false
   path: utility/revrep.cpp
   requiredBy: []
-  timestamp: '2021-11-21 02:00:13+09:00'
+  timestamp: '2021-12-05 12:32:24+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/revrep.cpp

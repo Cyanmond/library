@@ -36,9 +36,9 @@ data:
     \        constexpr void operator++() noexcept {\n            ++itr;\n        }\n\
     \        constexpr bool operator!=(const usize &other) const noexcept {\n    \
     \        return itr != other;\n        }\n        constexpr usize operator*()\
-    \ const noexcept {\n            return itr;\n        }\n    };\n    const rep_iterator\
-    \ first;\n    const usize last;\n\n  public:\n    constexpr rep(const usize first_,\
-    \ const usize last_) noexcept\n        : first(first_), last(std::max(first_,\
+    \ const noexcept {\n            return itr;\n        }\n    };\n    \n    const\
+    \ rep_iterator first;\n    const usize last;\n\n  public:\n    constexpr rep(const\
+    \ usize first_, const usize last_) noexcept\n        : first(first_), last(std::max(first_,\
     \ last_)) {}\n    constexpr rep_iterator begin() const noexcept {\n        return\
     \ first;\n    }\n    constexpr usize end() const noexcept {\n        return last;\n\
     \    }\n};\n#line 2 \"utility/scan.cpp\"\n\n#line 6 \"utility/scan.cpp\"\n\ntemplate\
@@ -72,7 +72,7 @@ data:
   isVerificationFile: true
   path: verify/library-checker/many_aplusb.test.cpp
   requiredBy: []
-  timestamp: '2021-11-23 18:07:55+09:00'
+  timestamp: '2021-12-05 12:32:24+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library-checker/many_aplusb.test.cpp

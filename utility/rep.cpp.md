@@ -27,9 +27,9 @@ data:
     \ : itr(pos) {}\n        constexpr void operator++() noexcept {\n            ++itr;\n\
     \        }\n        constexpr bool operator!=(const usize &other) const noexcept\
     \ {\n            return itr != other;\n        }\n        constexpr usize operator*()\
-    \ const noexcept {\n            return itr;\n        }\n    };\n    const rep_iterator\
-    \ first;\n    const usize last;\n\n  public:\n    constexpr rep(const usize first_,\
-    \ const usize last_) noexcept\n        : first(first_), last(std::max(first_,\
+    \ const noexcept {\n            return itr;\n        }\n    };\n    \n    const\
+    \ rep_iterator first;\n    const usize last;\n\n  public:\n    constexpr rep(const\
+    \ usize first_, const usize last_) noexcept\n        : first(first_), last(std::max(first_,\
     \ last_)) {}\n    constexpr rep_iterator begin() const noexcept {\n        return\
     \ first;\n    }\n    constexpr usize end() const noexcept {\n        return last;\n\
     \    }\n};\n"
@@ -39,17 +39,18 @@ data:
     \ operator++() noexcept {\n            ++itr;\n        }\n        constexpr bool\
     \ operator!=(const usize &other) const noexcept {\n            return itr != other;\n\
     \        }\n        constexpr usize operator*() const noexcept {\n           \
-    \ return itr;\n        }\n    };\n    const rep_iterator first;\n    const usize\
-    \ last;\n\n  public:\n    constexpr rep(const usize first_, const usize last_)\
-    \ noexcept\n        : first(first_), last(std::max(first_, last_)) {}\n    constexpr\
-    \ rep_iterator begin() const noexcept {\n        return first;\n    }\n    constexpr\
-    \ usize end() const noexcept {\n        return last;\n    }\n};\n"
+    \ return itr;\n        }\n    };\n    \n    const rep_iterator first;\n    const\
+    \ usize last;\n\n  public:\n    constexpr rep(const usize first_, const usize\
+    \ last_) noexcept\n        : first(first_), last(std::max(first_, last_)) {}\n\
+    \    constexpr rep_iterator begin() const noexcept {\n        return first;\n\
+    \    }\n    constexpr usize end() const noexcept {\n        return last;\n   \
+    \ }\n};\n"
   dependsOn:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: utility/rep.cpp
   requiredBy: []
-  timestamp: '2021-11-21 02:00:13+09:00'
+  timestamp: '2021-12-05 12:32:24+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library-checker/point_add_range_sum.test.cpp

@@ -19,31 +19,33 @@ data:
     #line 4 \"utility/repstep.cpp\"\n\nclass repstep {\n    struct repstep_iterator\
     \ {\n        usize itr, stepsize;\n        constexpr repstep_iterator(const usize\
     \ pos, const usize stp) noexcept\n            : itr(pos), stepsize(stp) {}\n \
-    \       constexpr void operator++() noexcept { itr += stepsize; }\n        constexpr\
-    \ bool operator!=(const usize &other) const noexcept { return itr < other; }\n\
-    \        constexpr usize operator*() const noexcept { return itr; }\n    };\n\
-    \    const repstep_iterator first;\n    const usize last;\n\n  public:\n    constexpr\
-    \ repstep(const usize first_, const usize last_, const usize stp_)\n        :\
-    \ first(first_, stp_), last(last_) {}\n    constexpr repstep_iterator begin()\
-    \ const noexcept { return first; }\n    constexpr usize end() const noexcept {\
-    \ return last; }\n};\n"
+    \       constexpr void operator++() noexcept {\n            itr += stepsize;\n\
+    \        }\n        constexpr bool operator!=(const usize &other) const noexcept\
+    \ {\n            return itr < other;\n        }\n        constexpr usize operator*()\
+    \ const noexcept {\n            return itr;\n        }\n    };\n\n    const repstep_iterator\
+    \ first;\n    const usize last;\n\n  public:\n    constexpr repstep(const usize\
+    \ first_, const usize last_, const usize stp_)\n        : first(first_, stp_),\
+    \ last(last_) {}\n    constexpr repstep_iterator begin() const noexcept {\n  \
+    \      return first;\n    }\n    constexpr usize end() const noexcept {\n    \
+    \    return last;\n    }\n};\n"
   code: "#pragma once\n\n#include \"../utility/int_alias.cpp\"\n\nclass repstep {\n\
     \    struct repstep_iterator {\n        usize itr, stepsize;\n        constexpr\
     \ repstep_iterator(const usize pos, const usize stp) noexcept\n            : itr(pos),\
-    \ stepsize(stp) {}\n        constexpr void operator++() noexcept { itr += stepsize;\
-    \ }\n        constexpr bool operator!=(const usize &other) const noexcept { return\
-    \ itr < other; }\n        constexpr usize operator*() const noexcept { return\
-    \ itr; }\n    };\n    const repstep_iterator first;\n    const usize last;\n\n\
-    \  public:\n    constexpr repstep(const usize first_, const usize last_, const\
+    \ stepsize(stp) {}\n        constexpr void operator++() noexcept {\n         \
+    \   itr += stepsize;\n        }\n        constexpr bool operator!=(const usize\
+    \ &other) const noexcept {\n            return itr < other;\n        }\n     \
+    \   constexpr usize operator*() const noexcept {\n            return itr;\n  \
+    \      }\n    };\n\n    const repstep_iterator first;\n    const usize last;\n\
+    \n  public:\n    constexpr repstep(const usize first_, const usize last_, const\
     \ usize stp_)\n        : first(first_, stp_), last(last_) {}\n    constexpr repstep_iterator\
-    \ begin() const noexcept { return first; }\n    constexpr usize end() const noexcept\
-    \ { return last; }\n};"
+    \ begin() const noexcept {\n        return first;\n    }\n    constexpr usize\
+    \ end() const noexcept {\n        return last;\n    }\n};"
   dependsOn:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: utility/repstep.cpp
   requiredBy: []
-  timestamp: '2021-11-04 11:05:03+09:00'
+  timestamp: '2021-12-05 12:32:24+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/repstep.cpp

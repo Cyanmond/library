@@ -11,17 +11,17 @@ data:
   bundledCode: "#line 2 \"utility/rec_lambda.cpp\"\n\n#include <utility>\n\ntemplate\
     \ <class F> class rec_lambda {\n    F f;\n\n  public:\n    explicit constexpr\
     \ rec_lambda(F &&f_) : f(std::forward<F>(f_)) {}\n    template <class... Args>\
-    \ constexpr auto operator()(Args &&...args) const { return f(*this, std::forward<Args>(args)...);\
-    \ }\n};\n"
+    \ constexpr auto operator()(Args &&...args) const {\n        return f(*this, std::forward<Args>(args)...);\n\
+    \    }\n};\n"
   code: "#pragma once\n\n#include <utility>\n\ntemplate <class F> class rec_lambda\
     \ {\n    F f;\n\n  public:\n    explicit constexpr rec_lambda(F &&f_) : f(std::forward<F>(f_))\
     \ {}\n    template <class... Args> constexpr auto operator()(Args &&...args) const\
-    \ { return f(*this, std::forward<Args>(args)...); }\n};"
+    \ {\n        return f(*this, std::forward<Args>(args)...);\n    }\n};"
   dependsOn: []
   isVerificationFile: false
   path: utility/rec_lambda.cpp
   requiredBy: []
-  timestamp: '2021-11-04 11:05:03+09:00'
+  timestamp: '2021-12-05 12:32:24+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/rec_lambda.cpp

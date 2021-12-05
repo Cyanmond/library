@@ -84,28 +84,28 @@ data:
     \ operator++() noexcept {\n            ++itr;\n        }\n        constexpr bool\
     \ operator!=(const usize &other) const noexcept {\n            return itr != other;\n\
     \        }\n        constexpr usize operator*() const noexcept {\n           \
-    \ return itr;\n        }\n    };\n    const rep_iterator first;\n    const usize\
-    \ last;\n\n  public:\n    constexpr rep(const usize first_, const usize last_)\
-    \ noexcept\n        : first(first_), last(std::max(first_, last_)) {}\n    constexpr\
-    \ rep_iterator begin() const noexcept {\n        return first;\n    }\n    constexpr\
-    \ usize end() const noexcept {\n        return last;\n    }\n};\n#line 2 \"utility/scan.cpp\"\
-    \n\n#line 4 \"utility/scan.cpp\"\n#include <iostream>\n#line 6 \"utility/scan.cpp\"\
-    \n\ntemplate <typename T> inline T scan() {\n    T x;\n    std::cin >> x;\n  \
-    \  return x;\n}\n\ntemplate <typename T> std::vector<T> scan_vec(const usize n)\
-    \ {\n    std::vector<T> res(n);\n    for (auto &e : res)\n        e = scan<T>();\n\
-    \    return res;\n}\n\ntemplate <typename T, class... Args> auto scan_vec(const\
-    \ usize n, Args... args) {\n    std::vector<decltype(scan_vec(args...))> res(n);\n\
-    \    for (auto &vec : res)\n        vec = scan_vec(args...);\n    return res;\n\
-    }\n\ntemplate <typename T, class F> std::vector<T> scan_vec_f(const usize n, const\
-    \ F &f) {\n    std::vector<T> res;\n    for (auto &e : res)\n        e = f(scan<T>());\n\
-    \    return res;\n}\n\ntemplate <typename T, class... Args> auto scan_vec_f(const\
-    \ usize n, Args... args) {\n    std::vector<decltype(scan_vec_f(args...))> res(n);\n\
-    \    for (auto &vec : res)\n        vec = scan_vec_f(args...);\n    return res;\n\
-    }\n#line 8 \"verify/library-checker/point_add_range_sum.test.cpp\"\n\nstruct monoid\
-    \ {\n    using value_type = i64;\n    static value_type operation(const value_type\
-    \ a, const value_type b) {\n        return a + b;\n    }\n    static value_type\
-    \ identity() {\n        return 0;\n    }\n};\n\nint main(void) {\n    const usize\
-    \ N = scan<usize>();\n    const usize Q = scan<usize>();\n    std::vector<i64>\
+    \ return itr;\n        }\n    };\n    \n    const rep_iterator first;\n    const\
+    \ usize last;\n\n  public:\n    constexpr rep(const usize first_, const usize\
+    \ last_) noexcept\n        : first(first_), last(std::max(first_, last_)) {}\n\
+    \    constexpr rep_iterator begin() const noexcept {\n        return first;\n\
+    \    }\n    constexpr usize end() const noexcept {\n        return last;\n   \
+    \ }\n};\n#line 2 \"utility/scan.cpp\"\n\n#line 4 \"utility/scan.cpp\"\n#include\
+    \ <iostream>\n#line 6 \"utility/scan.cpp\"\n\ntemplate <typename T> inline T scan()\
+    \ {\n    T x;\n    std::cin >> x;\n    return x;\n}\n\ntemplate <typename T> std::vector<T>\
+    \ scan_vec(const usize n) {\n    std::vector<T> res(n);\n    for (auto &e : res)\n\
+    \        e = scan<T>();\n    return res;\n}\n\ntemplate <typename T, class...\
+    \ Args> auto scan_vec(const usize n, Args... args) {\n    std::vector<decltype(scan_vec(args...))>\
+    \ res(n);\n    for (auto &vec : res)\n        vec = scan_vec(args...);\n    return\
+    \ res;\n}\n\ntemplate <typename T, class F> std::vector<T> scan_vec_f(const usize\
+    \ n, const F &f) {\n    std::vector<T> res;\n    for (auto &e : res)\n       \
+    \ e = f(scan<T>());\n    return res;\n}\n\ntemplate <typename T, class... Args>\
+    \ auto scan_vec_f(const usize n, Args... args) {\n    std::vector<decltype(scan_vec_f(args...))>\
+    \ res(n);\n    for (auto &vec : res)\n        vec = scan_vec_f(args...);\n   \
+    \ return res;\n}\n#line 8 \"verify/library-checker/point_add_range_sum.test.cpp\"\
+    \n\nstruct monoid {\n    using value_type = i64;\n    static value_type operation(const\
+    \ value_type a, const value_type b) {\n        return a + b;\n    }\n    static\
+    \ value_type identity() {\n        return 0;\n    }\n};\n\nint main(void) {\n\
+    \    const usize N = scan<usize>();\n    const usize Q = scan<usize>();\n    std::vector<i64>\
     \ A(N);\n    for (auto &e : A)\n        e = scan<i64>();\n\n    SegmentTree<monoid>\
     \ s(A);\n    for ([[maybe_unused]] const auto i : rep(0, Q)) {\n        const\
     \ int t = scan<int>();\n        if (t == 0) {\n            const usize p = scan<usize>();\n\
@@ -137,7 +137,7 @@ data:
   isVerificationFile: true
   path: verify/library-checker/point_add_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2021-11-23 18:07:55+09:00'
+  timestamp: '2021-12-05 12:32:24+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library-checker/point_add_range_sum.test.cpp
