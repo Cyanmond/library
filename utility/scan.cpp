@@ -17,10 +17,10 @@ template <typename T> std::vector<T> scan_vec(const usize n) {
     return res;
 }
 
-template <typename T, class... Args> auto scan_vec(const usize n, Args... args) {
-    std::vector<decltype(scan_vec(args...))> res(n);
+template <typename T> std::vector<std::vector<T>> scan_vec(const usize n, const usize m) {
+    std::vector<std::vector<T>> res(n);
     for (auto &vec : res)
-        vec = scan_vec(args...);
+        vec = scan_vec<T>(m);
     return res;
 }
 
@@ -31,9 +31,9 @@ template <typename T, class F> std::vector<T> scan_vec_f(const usize n, const F 
     return res;
 }
 
-template <typename T, class... Args> auto scan_vec_f(const usize n, Args... args) {
-    std::vector<decltype(scan_vec_f(args...))> res(n);
+template <typename T, class F> auto scan_vec_f(const usize n, const usize m, const F &f) {
+    std::vector<std::vector<T>> res(n);
     for (auto &vec : res)
-        vec = scan_vec_f(args...);
+        vec = scan_vec_f<T>(m, f);
     return res;
 }
