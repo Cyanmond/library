@@ -17,6 +17,7 @@ class rep {
             return itr;
         }
     };
+    
     const rep_iterator first;
     const usize last;
 

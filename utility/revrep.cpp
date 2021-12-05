@@ -17,6 +17,7 @@ class revrep {
             return itr;
         }
     };
+
     const revrep_iterator first;
     const usize last;
 
