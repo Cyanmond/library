@@ -64,7 +64,7 @@ data:
   isVerificationFile: false
   path: graph/union-find.cpp
   requiredBy: []
-  timestamp: '2021-11-23 14:12:56+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/union-find.cpp

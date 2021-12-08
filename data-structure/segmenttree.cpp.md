@@ -108,13 +108,13 @@ data:
     \ size_type ceil_pow2(const size_type n_) noexcept {\n        size_type res =\
     \ 1;\n        while (res < n_)\n            res <<= 1;\n        return res;\n\
     \    }\n\n    void internal_update(const size_type i) {\n        m_nodes[i] =\
-    \ M::operation(m_nodes[i << 1], m_nodes[i << 1 | 1]);\n    }\n};"
+    \ M::operation(m_nodes[i << 1], m_nodes[i << 1 | 1]);\n    }\n};\n"
   dependsOn:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: data-structure/segmenttree.cpp
   requiredBy: []
-  timestamp: '2021-11-19 23:23:28+09:00'
+  timestamp: '2021-12-08 20:25:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library-checker/point_add_range_sum.test.cpp

@@ -46,13 +46,13 @@ data:
     \"_u64(unsigned long long n) noexcept {\n    return static_cast<std::uint64_t>(n);\n\
     }\n\nconstexpr isize operator\"\"_iz(unsigned long long n) noexcept {\n    return\
     \ static_cast<isize>(n);\n}\nconstexpr usize operator\"\"_uz(unsigned long long\
-    \ n) noexcept {\n    return static_cast<usize>(n);\n}"
+    \ n) noexcept {\n    return static_cast<usize>(n);\n}\n"
   dependsOn:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: utility/int_literal.cpp
   requiredBy: []
-  timestamp: '2021-12-05 12:32:24+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/int_literal.cpp

@@ -294,7 +294,7 @@ data:
   isVerificationFile: false
   path: data-structure/lazysegmenttree_utility.cpp
   requiredBy: []
-  timestamp: '2021-11-12 23:02:31+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data-structure/lazysegmenttree_utility.cpp

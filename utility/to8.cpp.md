@@ -62,13 +62,13 @@ data:
     \ to8(const value_type h, const value_type w, const value_type maxh,\n       \
     \           const value_type maxw) noexcept\n        : i(h, w, maxh, maxw) {}\n\
     \    constexpr to8_iterator begin() const noexcept { return i; }\n    constexpr\
-    \ int end() const noexcept { return 8; }\n};"
+    \ int end() const noexcept { return 8; }\n};\n"
   dependsOn:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: utility/to8.cpp
   requiredBy: []
-  timestamp: '2021-11-19 23:44:30+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/to8.cpp

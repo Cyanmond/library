@@ -137,7 +137,7 @@ data:
   isVerificationFile: true
   path: verify/library-checker/point_add_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2021-12-06 01:55:19+09:00'
+  timestamp: '2021-12-08 20:25:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library-checker/point_add_range_sum.test.cpp

@@ -60,7 +60,7 @@ data:
   isVerificationFile: false
   path: math/static_modint_utility.cpp
   requiredBy: []
-  timestamp: '2021-11-30 20:43:23+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math/static_modint_utility.cpp

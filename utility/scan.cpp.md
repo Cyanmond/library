@@ -46,13 +46,13 @@ data:
     \    return res;\n}\n\ntemplate <typename T, class F> auto scan_vec_f(const usize\
     \ n, const usize m, const F &f) {\n    std::vector<std::vector<T>> res(n);\n \
     \   for (auto &vec : res)\n        vec = scan_vec_f<T>(m, f);\n    return res;\n\
-    }"
+    }\n"
   dependsOn:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: utility/scan.cpp
   requiredBy: []
-  timestamp: '2021-12-06 01:55:19+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library-checker/point_add_range_sum.test.cpp

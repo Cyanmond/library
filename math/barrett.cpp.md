@@ -45,7 +45,7 @@ data:
   path: math/barrett.cpp
   requiredBy:
   - math/pow_mod.cpp
-  timestamp: '2021-11-14 16:09:23+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math/barrett.cpp

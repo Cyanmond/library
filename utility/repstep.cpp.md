@@ -39,13 +39,13 @@ data:
     \n  public:\n    constexpr repstep(const usize first_, const usize last_, const\
     \ usize stp_)\n        : first(first_, stp_), last(last_) {}\n    constexpr repstep_iterator\
     \ begin() const noexcept {\n        return first;\n    }\n    constexpr usize\
-    \ end() const noexcept {\n        return last;\n    }\n};"
+    \ end() const noexcept {\n        return last;\n    }\n};\n"
   dependsOn:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: utility/repstep.cpp
   requiredBy: []
-  timestamp: '2021-12-05 12:32:24+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/repstep.cpp

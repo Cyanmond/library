@@ -178,13 +178,13 @@ data:
     \        if (k < m_size) m_nodes[k].lazy = E::operation(f, m_nodes[k].lazy);\n\
     \    }\n\n    void internal_propagate(const size_type k) {\n        internal_apply(k\
     \ << 1, m_nodes[k].lazy);\n        internal_apply(k << 1 | 1, m_nodes[k].lazy);\n\
-    \        m_nodes[k].lazy = E::identity();\n    }\n};"
+    \        m_nodes[k].lazy = E::identity();\n    }\n};\n"
   dependsOn:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: data-structure/lazy_segmenttree.cpp
   requiredBy: []
-  timestamp: '2021-11-21 10:45:51+09:00'
+  timestamp: '2021-12-08 20:25:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data-structure/lazy_segmenttree.cpp

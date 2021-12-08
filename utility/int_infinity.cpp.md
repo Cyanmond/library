@@ -97,7 +97,9 @@ data:
 
     constexpr isize infisz = infty<isize, 2>;
 
-    constexpr usize infusz = infty<usize, 4>;'
+    constexpr usize infusz = infty<usize, 4>;
+
+    '
   dependsOn:
   - utility/int_alias.cpp
   isVerificationFile: false
@@ -105,7 +107,7 @@ data:
   requiredBy:
   - debug/debug_impl.cpp
   - data-structure/lazysegmenttree_utility.cpp
-  timestamp: '2021-11-05 21:13:49+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/int_infinity.cpp

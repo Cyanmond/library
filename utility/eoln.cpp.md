@@ -23,12 +23,14 @@ data:
   code: '#pragma once
 
 
-    constexpr char eoln = ''\n'';'
+    constexpr char eoln = ''\n'';
+
+    '
   dependsOn: []
   isVerificationFile: false
   path: utility/eoln.cpp
   requiredBy: []
-  timestamp: '2021-11-04 01:59:04+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library-checker/point_add_range_sum.test.cpp

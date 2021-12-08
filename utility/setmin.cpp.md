@@ -13,12 +13,12 @@ data:
     \ true;\n    }\n    return false;\n}\n"
   code: "#pragma once\n\ntemplate <typename T> bool setmin(T &lhs, const T &rhs) {\n\
     \    if(lhs > rhs) {\n        lhs = rhs;\n        return true;\n    }\n    return\
-    \ false;\n}"
+    \ false;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: utility/setmin.cpp
   requiredBy: []
-  timestamp: '2021-11-03 23:24:28+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/setmin.cpp

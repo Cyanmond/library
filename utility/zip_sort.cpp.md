@@ -43,13 +43,13 @@ data:
     \ tail[i]..., i);\n    std::sort(res.begin(), res.end());\n\n    std::vector<usize>\
     \ order(n);\n    for (usize i = 0; i < n; ++i)\n        order[i] = std::get<std::tuple_size_v<std::tuple<Head,\
     \ Tail...>>>(res[i]);\n    helper::zip_sort_renumber(order, head, tail...);\n\
-    \    return order;\n}"
+    \    return order;\n}\n"
   dependsOn:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: utility/zip_sort.cpp
   requiredBy: []
-  timestamp: '2021-11-07 20:31:16+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/zip_sort.cpp

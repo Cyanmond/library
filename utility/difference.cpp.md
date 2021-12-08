@@ -15,13 +15,13 @@ data:
     \ T difference(const T a, const T b) {\n    return (a > b) ? (a - b) : (b - a);\n\
     }\n"
   code: "#pragma once\n\ntemplate <typename T> constexpr T difference(const T a, const\
-    \ T b) {\n    return (a > b) ? (a - b) : (b - a);\n}"
+    \ T b) {\n    return (a > b) ? (a - b) : (b - a);\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: utility/difference.cpp
   requiredBy:
   - utility/int_binary_search.cpp
-  timestamp: '2021-11-17 22:17:39+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/difference.cpp

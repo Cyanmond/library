@@ -24,13 +24,13 @@ data:
     \ <typename T> std::vector<T> make_vector(const usize n, const T &value) {\n \
     \   return std::vector(n, value);\n}\n\ntemplate <class... Args> auto make_vector(const\
     \ usize n, Args... args) {\n    return std::vector(n, make_vector(args...));\n\
-    }"
+    }\n"
   dependsOn:
   - utility/int_alias.cpp
   isVerificationFile: false
   path: utility/make_vector.cpp
   requiredBy: []
-  timestamp: '2021-12-05 12:32:58+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/make_vector.cpp

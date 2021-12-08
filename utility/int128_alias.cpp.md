@@ -27,14 +27,16 @@ data:
 
     using i128 = __int128_t;
 
-    using u128 = __uint128_t;'
+    using u128 = __uint128_t;
+
+    '
   dependsOn: []
   isVerificationFile: false
   path: utility/int128_alias.cpp
   requiredBy:
   - math/barrett.cpp
   - math/pow_mod.cpp
-  timestamp: '2021-11-14 15:47:05+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/int128_alias.cpp

@@ -131,7 +131,9 @@ data:
 
     using usize = std::size_t;
 
-    using isize = std::ptrdiff_t;'
+    using isize = std::ptrdiff_t;
+
+    '
   dependsOn: []
   isVerificationFile: false
   path: utility/int_alias.cpp
@@ -156,7 +158,7 @@ data:
   - data-structure/lazy_segmenttree.cpp
   - data-structure/segmenttree.cpp
   - data-structure/lazysegmenttree_utility.cpp
-  timestamp: '2021-11-03 23:24:28+09:00'
+  timestamp: '2021-12-08 20:23:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library-checker/point_add_range_sum.test.cpp
