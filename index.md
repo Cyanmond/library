@@ -6,6 +6,12 @@ data:
     - icon: ':warning:'
       path: bit/ceil_log2.cpp
       title: bit/ceil_log2.cpp
+    - icon: ':warning:'
+      path: bit/is_pow2.cpp
+      title: bit/is_pow2.cpp
+    - icon: ':warning:'
+      path: bit/popcount.cpp
+      title: bit/popcount.cpp
   - name: data-structure
     pages:
     - icon: ':warning:'

@@ -3,6 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
+    path: bit/popcount.cpp
+    title: bit/popcount.cpp
+  - icon: ':warning:'
     path: data-structure/lazy_segmenttree.cpp
     title: data-structure/lazy_segmenttree.cpp
   - icon: ':warning:'
@@ -150,6 +153,7 @@ data:
   - utility/scan.cpp
   - graph/union-find.cpp
   - debug/debug_impl.cpp
+  - bit/popcount.cpp
   - math/barrett.cpp
   - math/pow_mod.cpp
   - math/static_modint.cpp
