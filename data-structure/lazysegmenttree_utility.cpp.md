@@ -4,7 +4,7 @@ data:
   - icon: ':warning:'
     path: data-structure/lazysegmenttree.cpp
     title: data-structure/lazysegmenttree.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':warning:'
     path: utility/int_alias.cpp
     title: utility/int_alias.cpp
   - icon: ':warning:'

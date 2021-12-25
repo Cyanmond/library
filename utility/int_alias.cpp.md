@@ -14,7 +14,7 @@ data:
   - icon: ':warning:'
     path: data-structure/lazysegmenttree_utility.cpp
     title: data-structure/lazysegmenttree_utility.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':warning:'
     path: data-structure/segmenttree.cpp
     title: data-structure/segmenttree.cpp
   - icon: ':warning:'
@@ -44,7 +44,7 @@ data:
   - icon: ':warning:'
     path: utility/make_vector.cpp
     title: utility/make_vector.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':warning:'
     path: utility/rep.cpp
     title: utility/rep.cpp
   - icon: ':warning:'
@@ -53,9 +53,6 @@ data:
   - icon: ':warning:'
     path: utility/revrep.cpp
     title: utility/revrep.cpp
-  - icon: ':heavy_check_mark:'
-    path: utility/scan.cpp
-    title: utility/scan.cpp
   - icon: ':warning:'
     path: utility/to4.cpp
     title: utility/to4.cpp
@@ -65,16 +62,10 @@ data:
   - icon: ':warning:'
     path: utility/zip_sort.cpp
     title: utility/zip_sort.cpp
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: verify/library-checker/many_aplusb.test.cpp
-    title: verify/library-checker/many_aplusb.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: verify/library-checker/point_add_range_sum.test.cpp
-    title: verify/library-checker/point_add_range_sum.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: '#line 2 "utility/int_alias.cpp"
@@ -141,32 +132,29 @@ data:
   isVerificationFile: false
   path: utility/int_alias.cpp
   requiredBy:
-  - utility/int_literal.cpp
-  - utility/make_vector.cpp
-  - utility/repstep.cpp
-  - utility/to4.cpp
-  - utility/to8.cpp
-  - utility/rep.cpp
-  - utility/revrep.cpp
-  - utility/zip_sort.cpp
-  - utility/int_infinity.cpp
-  - utility/scan.cpp
-  - graph/union-find.cpp
   - debug/debug_impl.cpp
+  - graph/union-find.cpp
   - bit/popcount.cpp
   - math/barrett.cpp
   - math/pow_mod.cpp
-  - math/static_modint.cpp
   - math/static_modint_utility.cpp
+  - math/static_modint.cpp
+  - utility/rep.cpp
+  - utility/to4.cpp
+  - utility/make_vector.cpp
+  - utility/int_infinity.cpp
+  - utility/revrep.cpp
+  - utility/to8.cpp
+  - utility/int_literal.cpp
+  - utility/repstep.cpp
+  - utility/zip_sort.cpp
   - data-structure/lazysegmenttree.cpp
-  - data-structure/lazy_segmenttree.cpp
   - data-structure/segmenttree.cpp
+  - data-structure/lazy_segmenttree.cpp
   - data-structure/lazysegmenttree_utility.cpp
   timestamp: '2021-12-08 20:23:58+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - verify/library-checker/point_add_range_sum.test.cpp
-  - verify/library-checker/many_aplusb.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: utility/int_alias.cpp
 layout: document
 redirect_from:
